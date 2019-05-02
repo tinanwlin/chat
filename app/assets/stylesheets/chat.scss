@@ -1,0 +1,41 @@
+.room-nav-link {
+  border: 1px #5277F0;
+  background: #CEE4F3;
+
+  & + .room-nav-link {
+    border-top: 0 none;
+  }
+}
+
+.chat {
+  border: 1px solid #77787F;
+  background: #FBFBFB;
+  height: 50vh;
+  border-radius: 5px 5px 0 0;
+  overflow-y: auto;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+
+.chat-message-container {
+  padding: 5px;
+
+  .chat-message-user {
+    margin: 5px;
+  }
+
+  .message-content {
+    padding: 5px;
+    border: 1px solid #FBFBFB;
+    border-radius: 5px;
+    background: #007bff;
+    color: #FBFBFB;
+  }
+
+  & + .chat-message-container {
+    margin-top: 10px;
+  }
+}
