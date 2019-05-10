@@ -6,7 +6,7 @@
   </div>
 
   <div class="col">
-    <div class="chat">
+    <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
       <% @room_messages.each do |room_msg| %>
         <div class="chat-message-container">
           <div class="row no-gutters">
@@ -45,5 +45,25 @@
 
       <%= f.input :room_id, as: :hidden %>
     <% end %>
+  </div>
+</div>
+
+<div class="d-none" data-role="message-template">
+  <div class="chat-message-container">
+    <div class="row no-gutters">
+      <div class="col-auto text-center">
+        <p class="chat-message-user" data-role="message-user"></p>
+      </div>
+
+      <div class="col">
+        <div class="message-content">
+          <p class="mb-1" data-role="message-text"></p>
+
+          <div class="text-right">
+            <small data-role="message-date"></small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
